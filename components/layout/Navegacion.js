@@ -28,12 +28,12 @@ const Navegacion = () => {
             <Link href="/">
                 <a>Inicio</a>
             </Link>
-            <Link href="/populares">
-                <a>Populares</a>
+            <Link href="/nosotros">
+                <a>nosotros</a>
             </Link>
             {usuario && ( 
-                <Link href="/nuevo-producto">
-                    <a>Nuevo producto</a>
+                <Link href="/juego">
+                    <a>¡Juego!</a>
                 </Link>
             )}
             

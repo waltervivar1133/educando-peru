@@ -21,5 +21,14 @@ export default function validarCrearCuenta(valores) {
         errores.password = 'El password debe ser de al menos 6 caracteres'
     }
 
+        // validar el password
+        if(!valores.edad) {
+            errores.edad = "El edad es obligatorio";
+        } else if( valores.edad.length >= 3 ) {
+            errores.edad = 'El edad debe ser de al mas de 3 caracteres'
+        }
+
+
+
     return errores;
 }

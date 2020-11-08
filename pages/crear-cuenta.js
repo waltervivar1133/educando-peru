@@ -12,8 +12,10 @@ import validarCrearCuenta from '../validacion/validarCrearCuenta';
 
 const STATE_INICIAL = {
   nombre: '',
+  edad: '',
   email: '',
   password: ''
+
 }
  
 const CrearCuenta = () => {
@@ -22,11 +24,11 @@ const CrearCuenta = () => {
 
   const { valores, errores, handleSubmit, handleChange, handleBlur } = useValidacion(STATE_INICIAL, validarCrearCuenta, crearCuenta);
 
-  const { nombre, email, password } = valores;
+  const { nombre, email, password , edad} = valores;
 
   async function crearCuenta() {
     try {
-      await firebase.registrar(nombre, email, password);
+      await firebase.registrar(nombre, email, password, edad);
       Router.push('/');
     } catch (error) {
       console.error('Hubo un error al crear el usuario ', error.message);
@@ -77,7 +79,21 @@ const CrearCuenta = () => {
                   />
               </Campo>
               {errores.email && <Error>{errores.email}</Error> }
-  
+              <Campo>
+                  <label htmlFor="edad">edad</label>
+                  <input 
+                      type="number"
+                      id="edad"
+                      placeholder="Tu edad"
+                      name="edad"
+                      value={edad}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                  />
+              </Campo>
+
+              {errores.edad && <Error>{errores.edad}</Error> }
+              
               <Campo>
                   <label htmlFor="password">Password</label>
                   <input 

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import Buscar from '../ui/Buscar';
+
 import Navegacion from './Navegacion';
 import Boton from '../ui/Boton';
 import { FirebaseContext } from '../../firebase';
@@ -17,14 +17,14 @@ const ContenedorHeader = styled.div`
     }
 `;
 
-const Logo = styled.a`
-    color: var(--naranja);
-    font-size: 4rem;
-    line-height: 0;
-    font-weight: 700;
-    font-family: 'Roboto Slab', serif;
-    margin-right: 2rem;
-`;
+const Logo = styled.img`
+ width: 10rem;
+ height: 5rem;
+ display:block;
+ background-size: 100%;
+ background-image : url('/static/img/logo.png');
+ border: none;
+`
 
 const Header = () => {
 
@@ -46,11 +46,11 @@ const Header = () => {
                     `}
                 >
                     <Link href="/">
-                        <Logo>P</Logo>
+                       <Logo/>
                     </Link>
                     
 
-                    <Buscar />
+               
 
                     <Navegacion />
                 </div>
