@@ -30,12 +30,12 @@ const Home = () => {
     <div>
       <Layout>
       
-          <div class="jumbotron jumbotron-fluid">
-              <div class="container">
-                <h1 class="display-4">
+          <div className="jumbotron jumbotron-fluid">
+              <div className="container">
+                <h1 className="display-4">
                 Educando Peru
                 </h1>
-                <p class="lead font-italic">
+                <p className="lead font-italic">
                   " Learn Apply Be Patient Increase"
                 </p>
               </div>
