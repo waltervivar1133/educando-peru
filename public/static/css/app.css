@@ -11,3 +11,13 @@
     background-color: #FFF;
 }
 
+a:hover{
+    text-decoration: none;
+    color : none !important;
+}
+img{
+    border: 0 !important;
+    vertical-align: middle;
+    border-style: none;
+
+}

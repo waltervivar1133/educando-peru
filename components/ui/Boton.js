@@ -17,6 +17,7 @@ const Boton = styled.a`
 
     &:hover {
         cursor: pointer;
+        color:  ${props => props.bgColor ? 'white' : '#000'};
     }
 `;
 

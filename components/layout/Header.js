@@ -17,13 +17,15 @@ const ContenedorHeader = styled.div`
     }
 `;
 
-const Logo = styled.img`
- width: 10rem;
- height: 5rem;
- display:block;
+const Logo = styled.a`
+ width: 15rem;
+ height: 10rem;
  background-size: 100%;
  background-image : url('/static/img/logo.png');
- border: none;
+ background-repeat: no-repeat;
+ &:hover{
+     cursor: pointer;
+ }
 `
 
 const Header = () => {
@@ -45,7 +47,9 @@ const Header = () => {
                         align-items: center;
                     `}
                 >
-                    <Link href="/">
+                    <Link css={css` 
+                        border: none !important;
+                    `} href="/">
                        <Logo/>
                     </Link>
                     
